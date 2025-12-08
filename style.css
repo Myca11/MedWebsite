@@ -247,6 +247,11 @@ body, button {
   left: -3px;
   bottom: calc(var(--half-header-height) * -0.5 + 50%);
 }
+@media (hover: hover) {
+  .h-link--active:hover {
+    color: #4FB279;
+  }
+}
 
 /* MAIN */
 
@@ -354,9 +359,8 @@ body, button {
 .m-block-right {
   border-radius: 24px;
   padding: 20px;
-  background: url(assets/images/background-heart-392.svg) no-repeat,
+  background: url(assets/images/background-heart-392.svg) right bottom no-repeat,
   radial-gradient(45.92% 71.49% at 45.81% 28.51%, #3fca7a 0%, #4fb279 100%);
-  background-position: right bottom;
 
   display: flex;
   flex-direction: column;
@@ -434,6 +438,127 @@ body, button {
   }
 }
 
+/* SECTION-OUR-SERVICES */
+
+.os-content {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.os-cards-block {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.os-cards-header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.os-section-description {
+  color: #505050;
+  font-size: 16px;
+  line-height: 120%;
+
+  display: flex;
+  gap: 8px;
+}
+
+.osch-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.osch-title {
+  max-width: 580px;
+  color: #1C1C1C;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 120%;
+}
+
+.oscb-button {
+  padding: 12px 30px;
+  border-radius: 30px;
+  background-color: #4FB279;
+  color: #ffffff;
+  font-size: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.os-cards-inner {
+  display: grid;
+  gap: 13px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.os-card {
+  min-height: 331px;
+  border-radius: 20px;
+  padding: 10px 13px 16px 20px;
+  background: url(assets/images/circleBackground.svg) no-repeat right top / 150px, #F7F7F7;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.osc-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+}
+
+.os-card--ultrasound > .osc-image {
+  background: url(assets/images/photoUltrasoundProcess.jpg) bottom right no-repeat;
+  background-size: cover;
+}
+
+.os-card--cardiologist > .osc-image {
+  background: url(assets/images/photoConsultationCardiologist.jpg) center right no-repeat;
+  background-size: cover;
+}
+
+.os-card--EECP > .osc-image {
+  background: url(assets/images/photoEECP-office.jpg) center left no-repeat;
+  background-size: cover;
+}
+
+.os-card--diagnostics > .osc-image {
+  background: url(assets/images/heartDiagnosticPhoto.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.osc-texts-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.osc-title {
+  color: #1C1C1C;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 120%;
+}
+
+.osc-text {
+  color: #505050;
+  font-size: 14px;
+  line-height: 120%;
+}
+
+.os-cards-inner > .oscb-button {
+  display: none;
+}
+
 /* MEDIA */
 
 @media(max-width: 1300px) {
@@ -465,9 +590,8 @@ body, button {
   /* MAIN-BLOCK-RIGHT */
 
   .m-block-right {
-    background: url(assets/images/background-heart-282.svg) no-repeat,
+    background: url(assets/images/background-heart-282.svg) right center no-repeat,
     radial-gradient(45.92% 71.49% at 45.81% 28.51%, #3fca7a 0%, #4fb279 100%);
-    background-position: right center;
   }
 }
 
@@ -475,7 +599,7 @@ body, button {
   /* MAIN */
 
   .m-content {
-    padding: 20px 0;
+    padding: 20px 0 40px 0;
     
     gap: 20px;
     grid-template-columns: 1fr;
@@ -484,7 +608,7 @@ body, button {
   /* MAIN-BLOCK-LEFT */
 
   .m-block-left {
-    height: 284px;
+    min-height: 284px;
     padding: 30px;
     order: 1;
   }
@@ -494,9 +618,8 @@ body, button {
   .m-block-right {
     height: 371px;
     padding: 40px;
-    background: url(assets/images/background-heart-431.svg) no-repeat,
+    background: url(assets/images/background-heart-431.svg) right center no-repeat,
     radial-gradient(45.92% 71.49% at 45.81% 28.51%, #3fca7a 0%, #4fb279 100%);
-    background-position: right center;
   }
 }
 
@@ -505,6 +628,16 @@ body, button {
 
   .h-meta {
     gap: 20px;
+  }
+
+  /* OUR-SERVICES */
+
+  .os-cards-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .os-card {
+    background: url(assets/images/circleBackground.svg) no-repeat right top / 125px, #F7F7F7;
   }
 }
 
@@ -546,6 +679,10 @@ body, button {
 
   /* MAIN */
 
+  .m-content {
+    padding: 15px 0 30px 0;
+  }
+
   .m-block-right {
     padding: 20px;
   }
@@ -562,6 +699,15 @@ body, button {
 
   .mbr-subtext {
     font-size: 12px;
+  }
+
+  /* OUR-SERVICES */
+
+  .oscb-button {
+    display: none;
+  }
+  .os-cards-inner > .oscb-button {
+    display: flex;
   }
 }
 
@@ -601,11 +747,11 @@ body, button {
     radial-gradient(45.92% 71.49% at 45.81% 28.51%, #3fca7a 0%, #4fb279 100%);
   }
 
-  /* MAIN-LEFT */
+  /* MAIN-BLOCK-LEFT */
 
   .m-block-left {
     padding: 20px;
-    height: 250px;
+    min-height: 250px;
 
     justify-content: flex-end;
     gap: 20px;
@@ -637,6 +783,27 @@ body, button {
   }
 }
 
+@media(max-width: 600px) {
+  /* OUR-SERVICES */
+
+  .os-cards-block {
+    gap: 20px;
+  }
+
+  .osch-title {
+    margin-right: 50px;
+    font-size: 20px;
+  }
+
+  .os-cards-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .os-card {
+    background: url(assets/images/circleBackground.svg) no-repeat right top / 110px, #F7F7F7;
+  }
+}
+
 @media(max-width: 500px) {
   /* HEADER */
   /* HEADER-TOP */
@@ -646,10 +813,21 @@ body, button {
   }
 
   /* MAIN */
+
+  .m-content {
+    padding: 15px 0;
+  }
+
   /* MAIN-BLOCK-RIGHT */
 
   .m-block-right {
     background: url(assets/images/background-heart-152.svg) no-repeat right top,
     radial-gradient(45.92% 71.49% at 45.81% 28.51%, #3fca7a 0%, #4fb279 100%);
+  }
+
+  /* OUR-SERVICES */
+
+  .os-content {
+    padding: 30px 0;
   }
 }
