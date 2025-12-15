@@ -622,11 +622,12 @@ button {
 }
 
 .osbb-item {
+  margin-left: 15px;
   color: #000000;
   font-size: 12px;
-  display: flex;
-  gap: 9px;
-  align-items: center;
+  list-style: none;
+
+  position: relative;
 }
 .osbb-item::before {
   content: '';
@@ -635,6 +636,10 @@ button {
   height: 6px;
   border-radius: 100%;
   background-color: #4FB279;
+
+  position: absolute;
+  top: 6px;
+  left: -15px;
 }
 
 .osb-button {
@@ -1171,7 +1176,6 @@ button {
   /* OUR-SERVICES-BLOCK */
 
   .os-block {
-    height: 588px;
     padding: 20px;
     background: url(assets/images/lumenairEECP-therapySystem-334.png) no-repeat bottom center, #F7F7F7;
   }
@@ -1196,6 +1200,7 @@ button {
 
   .osb-button {
     width: 100%;
+    margin-bottom: 222px;
   }
 
   /* FREQUENTLY-ASKED-QUESTIONS */
