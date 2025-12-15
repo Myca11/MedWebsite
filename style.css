@@ -25,6 +25,12 @@ body, button {
   font-family: "Manrope", sans-serif;
 }
 
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 .container {
   max-width: 1480px;
   padding: 0 20px;
@@ -74,6 +80,22 @@ body, button {
 }
 .search-input::-webkit-search-cancel-button {
   appearance: none;
+}
+
+/* ----------------------------------------------------------------- */
+
+.section-description {
+  margin-bottom: 20px;
+  color: #505050;
+  font-size: 16px;
+  line-height: 120%;
+
+  display: flex;
+  gap: 8px;
+}
+
+.hidden {
+  display: none;
 }
 
 .label-hidden {
@@ -176,9 +198,6 @@ body, button {
   border-radius: 100%;
   background: url(assets/images/peephole-indicator.svg) center center no-repeat, #F7F7F7;
 
-  border: none;
-  cursor: pointer;
-
   transition: 0.2s all;
 }
 @media (hover: hover) {
@@ -194,9 +213,6 @@ body, button {
   color: #ffffff;
   font-size: 12px;
   white-space: nowrap;
-  cursor: pointer;
-  border: none;
-  text-decoration: none;
 
   transition: 0.2s all;
 }
@@ -319,9 +335,7 @@ body, button {
   align-items: center;
   gap: 10px;
 
-  cursor: pointer;
   border: 1px solid #ffffff;
-  text-decoration: none;
 
   transition: 0.2s all;
 }
@@ -425,9 +439,7 @@ body, button {
   color: #ffffff;
   font-size: 12px;
   white-space: nowrap;
-  cursor: pointer;
   border: 1px solid #ffffff;
-  text-decoration: none;
 
   transition: 0.2s all;
 }
@@ -438,32 +450,22 @@ body, button {
   }
 }
 
-/* SECTION-OUR-SERVICES */
+/* OUR-SERVICES */
 
 .os-content {
   width: 100%;
   padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
 }
+
+/* OUR-SERVICES-CARDS-BLOCK */
 
 .os-cards-block {
   display: flex;
   flex-direction: column;
   gap: 40px;
-}
-
-.os-cards-header {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.os-section-description {
-  color: #505050;
-  font-size: 16px;
-  line-height: 120%;
-
-  display: flex;
-  gap: 8px;
 }
 
 .osch-inner {
@@ -474,6 +476,7 @@ body, button {
 
 .osch-title {
   max-width: 580px;
+  margin-right: 50px;
   color: #1C1C1C;
   font-size: 24px;
   font-weight: bold;
@@ -486,11 +489,19 @@ body, button {
   background-color: #4FB279;
   color: #ffffff;
   font-size: 12px;
+  white-space: nowrap;
 
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
+
+  transition: 0.2s all;
+}
+@media (hover: hover) {
+  .oscb-button:hover {
+    background-color: #2B9F5C;
+  }
 }
 
 .os-cards-inner {
@@ -517,7 +528,7 @@ body, button {
 }
 
 .os-card--ultrasound > .osc-image {
-  background: url(assets/images/photoUltrasoundProcess.jpg) bottom right no-repeat;
+  background: url(assets/images/photoUltrasoundProcess-350.jpg) bottom right no-repeat;
   background-size: cover;
 }
 
@@ -559,7 +570,380 @@ body, button {
   display: none;
 }
 
+/* OUR-SERVICES-BLOCK */
+
+.os-block {
+  width: 100%;
+  border-radius: 24px;
+  padding: 56px 60px;
+  background: url(assets/images/lumenairEECP-therapySystem-572.png) no-repeat calc(100% - 116px) bottom / contain, #F7F7F7;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.osb-texts-inner {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.osb-title {
+  color: #1C1C1C;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 120%;
+}
+
+.osb-text {
+  color: #505050;
+  font-size: 14px;
+}
+
+.osb-benefits {
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.osbb-title {
+  color: #1C1C1C;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.osbb-link {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.osbb-item {
+  color: #000000;
+  font-size: 12px;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+.osbb-item::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: #4FB279;
+}
+
+.osb-button {
+  width: 172px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: #4FB279;
+  color: #ffffff;
+  font-size: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  transition: 0.2s all;
+}
+@media (hover: hover) {
+  .osb-button:hover {
+    background-color: #2B9F5C;
+  }
+}
+
+/* FREQUENTLY-ASKED-QUESTIONS */
+
+.faq-content {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.faq-block {
+  width: 100%;
+
+  display: flex;
+  gap: 170px;
+}
+
+.faqb-texts-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faqb-title {
+  color: #1C1C1C;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 120%;
+  white-space: nowrap;
+}
+
+.faqb-text {
+  width: 309px;
+  color: #505050;
+  font-size: 14px;
+}
+
+.faqb-list {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.faqb-item {
+  width: 100%;
+  border-radius: 10px;
+  padding: 8px;
+  padding-right: 20px;
+  background-color: #F7F7F7;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 93px;
+}
+
+.faqbi-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.faqbi-text {
+  color: #1C1C1C;
+  font-size: 16px;
+  line-height: 120%;
+}
+
+/* REVIEWS */
+
+.r-content {
+  padding: 40px 0;
+}
+
+.r-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.r-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rh-texts-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rh-title {
+  color: #1C1C1C;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 120%;
+}
+
+.rh-text {
+  max-width: 356px;
+  color: #505050;
+  font-size: 14px;
+}
+
+.rh-buttons-inner {
+  display: flex;
+  gap: 20px;
+}
+
+.rh-button {
+  width: 126px;
+  height: 42px;
+  border-radius: 30px;
+  background-color: #4FB279;
+  color: #ffffff;
+  font-size: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.2s all;
+}
+@media (hover: hover) {
+  .rh-button:hover {
+    background-color: #2B9F5C;
+  }
+}
+.r-cards-inner > .rh-button {
+  display: none;
+}
+
+.rh-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.rh-button-prev, .rh-button-next {
+  width: 42px;
+  height: 42px;
+  border-radius: 24px;
+}
+
+.rh-button-next {
+  background: url(assets/images/arrow-next.svg) center center no-repeat, #D9D9D9;
+}
+
+.rh-button-prev {
+  background: url(assets/images/arrow-next.svg) center center no-repeat, #D9D9D9;
+  transform: scaleX(-1);
+}
+
+.rh-button-inactive {
+  background: url(assets/images/arrow-next-inactive.svg) center center no-repeat, #F5F5F5;
+}
+
+.r-cards-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.r-card-video {
+  max-width: 350px;
+  height: 400px;
+  border-radius: 20px;
+  padding: 12px;
+  background: url(assets/images/client-photo.jpg) bottom center no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.rc-button-video-play {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #4FB279;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.2s all;
+}
+@media (hover: hover) {
+  .rc-button-video-play:hover {
+    background-color: #2B9F5C;
+  }
+}
+
+.r-card {
+  max-width: 350px;
+  height: 400px;
+  border-radius: 20px;
+  padding: 18px 16px;
+  background-color: #F7F7F7;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.rc-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.rc-image {
+  margin-bottom: 8px;
+}
+
+.rc-title {
+  color: #1C1C1C;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 120%;
+}
+
+.rc-text {
+  color: #505050;
+  font-size: 14px;
+  line-height: 120%;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rc-expandable-text {
+  background-color: transparent;
+  color: #1C1C1C;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 120%;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.rc-data {
+  border-radius: 50px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 14px;
+  line-height: 120%;
+}
+
 /* MEDIA */
+
+@media(max-width: 1450px) {
+  /* MAIN */
+  /* MAIN-BLOCK-RIGHT */
+
+  .m-block-right {
+    background: url(assets/images/background-heart-282.svg) right center no-repeat,
+    radial-gradient(45.92% 71.49% at 45.81% 28.51%, #3fca7a 0%, #4fb279 100%);
+  }
+}
+
+@media(max-width: 1400px) {
+  /* MAIN */
+  
+  .m-content {
+    gap: 15px;
+  }
+}
+
+@media(max-width: 1350px) {
+  /* REVIEWS */
+
+  .r-block {
+    gap: 40px;
+  }
+
+  .r-cards-inner {
+    gap: 27px;
+  }
+}
 
 @media(max-width: 1300px) {
   /* SEARCH */
@@ -577,21 +961,28 @@ body, button {
   }
 }
 
-@media(max-width: 1400px) {
-  /* MAIN */
+@media(max-width: 1250px) {
+  /* OUR-SERVICES */
 
-  .m-content {
-    gap: 15px;
+  /* OUR-SERVICES-BLOCK */
+
+  .os-block {
+    padding: 43px 40px;
+    background: url(assets/images/lumenairEECP-therapySystem-492.png) no-repeat calc(100% - 116px) bottom / contain, #F7F7F7;
+    gap: 37px;
   }
-}
 
-@media(max-width: 1450px) {
-  /* MAIN */
-  /* MAIN-BLOCK-RIGHT */
+  .osb-text {
+    font-size: 16px;
+  }
 
-  .m-block-right {
-    background: url(assets/images/background-heart-282.svg) right center no-repeat,
-    radial-gradient(45.92% 71.49% at 45.81% 28.51%, #3fca7a 0%, #4fb279 100%);
+  .osb-benefits {
+    margin: 0;
+    margin-top: 3px;
+  }
+
+  .osbb-item {
+    font-size: 14px;
   }
 }
 
@@ -621,6 +1012,58 @@ body, button {
     background: url(assets/images/background-heart-431.svg) right center no-repeat,
     radial-gradient(45.92% 71.49% at 45.81% 28.51%, #3fca7a 0%, #4fb279 100%);
   }
+
+  /* REVIEWS */
+
+  .r-block {
+    gap: 22px;
+  }
+
+  .r-header {
+    align-items: flex-end;
+  }
+
+  .r-cards-inner {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 7px;
+  }
+
+  .r-card:nth-child(4) {
+    display: none;
+  }
+}
+
+@media(max-width: 1150px) {
+  /* OUR-SERVICES */
+
+  /* OUR-SERVICES-BLOCK */
+
+  .os-block {
+    padding: 56px 40px;
+    background: url(assets/images/lumenairEECP-therapySystem-354.png) no-repeat right bottom / contain, #F7F7F7;
+    gap: 20px;
+  }
+
+  .osb-text {
+    font-size: 16px;
+  }
+
+  .osb-benefits {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .osbb-item {
+    font-size: 12px;
+  }
+
+  /* FREQUENTLY-ASKED-QUESTIONS */
+
+  .faq-block {
+    flex-direction: column;
+    gap: 20px;
+  }
+
 }
 
 @media(max-width: 1100px) {
@@ -655,6 +1098,23 @@ body, button {
 
   .hm-inner {
     display: none;
+  }
+}
+
+@media(max-width: 900px) {
+  /* REVIEWS */
+
+  .r-cards-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 27px;
+  }
+
+  .r-card, .r-card-video {
+    max-width: 100%;
+  }
+
+  .r-card:nth-child(4) {
+    display: flex;
   }
 }
 
@@ -703,11 +1163,70 @@ body, button {
 
   /* OUR-SERVICES */
 
-  .oscb-button {
-    display: none;
+  .os-content {
+    padding: 30px 0;
+    gap: 60px;
   }
-  .os-cards-inner > .oscb-button {
-    display: flex;
+  
+  /* OUR-SERVICES-BLOCK */
+
+  .os-block {
+    height: 588px;
+    padding: 20px;
+    background: url(assets/images/lumenairEECP-therapySystem-334.png) no-repeat bottom center, #F7F7F7;
+  }
+
+  .osb-texts-inner {
+    width: 100%;
+    padding-right: 30px;
+  }
+
+  .osb-title {
+    font-size: 20px;
+  }
+
+  .osb-text {
+    font-size: 12px;
+  }
+
+  .osb-benefits {
+    padding-right: 36px;
+    margin: 0;
+  }
+
+  .osb-button {
+    width: 100%;
+  }
+
+  /* FREQUENTLY-ASKED-QUESTIONS */
+
+  .faq-content {
+    padding: 30px 0;
+  }
+
+  /* REVIEWS */
+
+  .r-header {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .rh-text {
+    font-size: 12px;
+  }
+
+  .rh-buttons-inner {
+    width: 100%;
+  }
+
+  .rh-button {
+    width: 100%;
+  }
+
+  .rh-buttons {
+    display: none;
   }
 }
 
@@ -781,6 +1300,24 @@ body, button {
   .mbl-button-left, .mbl-button-right {
     width: 100%;
   }
+
+  /* REVIEWS */
+
+  .r-cards-inner {
+    gap: 7px;
+  }
+}
+
+@media(max-width: 650px) {
+  /* FREQUENTLY-ASKED-QUESTIONS */
+
+  .faqb-item {
+    padding: 12px;
+  }
+
+  .faqbi-icon {
+    display: none;
+  }
 }
 
 @media(max-width: 600px) {
@@ -795,12 +1332,51 @@ body, button {
     font-size: 20px;
   }
 
+  .oscb-button {
+    display: none;
+  }
+  .os-cards-inner > .oscb-button {
+    display: flex;
+  }
+
   .os-cards-inner {
     grid-template-columns: 1fr;
   }
 
   .os-card {
     background: url(assets/images/circleBackground.svg) no-repeat right top / 110px, #F7F7F7;
+  }
+
+  /* FREQUENTLY-ASKED-QUESTIONS */
+  
+  .faqbi-text {
+    font-size: 12px;
+  }
+}
+
+@media(max-width: 550px) {
+  /* REVIEWS */
+
+  .r-content {
+    padding: 30px 0;
+  }
+
+  .r-block {
+    gap: 20px;
+  }
+
+  .r-cards-inner > .rh-button {
+    display: flex;
+  }
+
+  .r-cards-inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .r-card {
+    height: auto;
+    justify-content: flex-start;
   }
 }
 
